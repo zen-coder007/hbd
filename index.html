@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#64001e">
+    <title>Happy Birthday Kashish ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="hearts" aria-hidden="true"></div>
+    <div id="confetti" aria-hidden="true"></div>
+
+    <button id="musicToggle" class="music-toggle" type="button"
+            aria-label="Play background music" title="Toggle music">
+        ♫ <span id="musicStatus">Music off</span>
+    </button>
+    <audio id="birthdayMusic" src="renu1.mp3" loop preload="none"></audio>
+
+    <!-- PAGE 1: GIFT REVEAL -->
+    <section id="page1" class="page active">
+        <div class="ambient-glow"></div>
+        <p class="intro-label">A LITTLE SURPRISE FOR SOMEONE SPECIAL</p>
+
+        <div id="birthdayReveal" class="birthday-reveal">
+            <p class="eyebrow">TODAY IS ALL ABOUT YOU</p>
+            <h1>Happy Birthday</h1>
+            <h2>Kashish<span class="title-star"> ✨</span></h2>
+            <p class="reveal-caption">
+                A little world of surprises, made just for you.
+            </p>
+        </div>
+
+        <button id="firstGift" class="gift-box" type="button"
+                aria-label="Open your birthday gift">
+            <span class="gift-sparkle sparkle-one">✦</span>
+            <span id="giftEmoji" class="gift-emoji">🎁</span>
+            <span class="gift-tap">TAP TO OPEN</span>
+            <span class="gift-sparkle sparkle-two">✧</span>
+        </button>
+
+        <p id="giftInstruction" class="gift-instruction">
+            Your birthday surprise is waiting...
+        </p>
+
+        <button id="startJourney" class="primary hidden" type="button">
+            Continue to your surprises <span>→</span>
+        </button>
+
+        <p class="chapter-count">A LITTLE JOURNEY · MADE WITH LOVE</p>
+    </section>
+
+    <!-- PAGE 2: CAKE AND CANDLE -->
+    <section id="page2" class="page">
+        <p class="eyebrow">CHAPTER 01 · MAKE A WISH</p>
+        <h1>Make a wish, Kashish ✨</h1>
+        <p class="subtitle">
+            Close your eyes for a moment and wish for something beautiful.
+        </p>
+
+        <div class="cake-area">
+            <div class="cake-candle" id="candle" role="button"
+                 tabindex="0" aria-label="Blow out the candle">
+                <span class="wick"></span>
+                <span class="flame" id="flame"></span>
+            </div>
+            <div class="cake-top">🍓</div>
+            <div class="cake-layer layer-one"></div>
+            <div class="cake-layer layer-two"></div>
+            <div class="cake-layer layer-three"></div>
+            <div class="cake-plate"></div>
+        </div>
+
+        <p id="candleMessage" class="message hidden">
+            Wish made? ✨ May your year be full of laughter, love and amazing memories!
+        </p>
+
+        <button id="blowCandle" class="primary" type="button">
+            Blow out the candle 🕯️
+        </button>
+
+        <button id="next3" class="primary hidden" type="button">
+            Next surprise <span>→</span>
+        </button>
+    </section>
+
+    <!-- PAGE 3: BALLOON POP -->
+    <section id="pageBalloon" class="page">
+        <p class="eyebrow">CHAPTER 02 · POP SOME HAPPINESS</p>
+        <h1>Pop the balloons! 🎈</h1>
+        <p class="subtitle">Each balloon has a little message for you.</p>
+
+        <div class="balloon-area">
+            <button class="balloon" data-message="You make ordinary days brighter! ☀️" aria-label="Pop balloon 1">🎈</button>
+            <button class="balloon" data-message="Never stop being your wonderful self! 💗" aria-label="Pop balloon 2">🎈</button>
+            <button class="balloon" data-message="More laughter, more adventures, more memories! 🌈" aria-label="Pop balloon 3">🎈</button>
+            <button class="balloon" data-message="You deserve every beautiful thing coming your way! ✨" aria-label="Pop balloon 4">🎈</button>
+            <button class="balloon" data-message="Bestie forever. No boring days allowed! 🫶" aria-label="Pop balloon 5">🎈</button>
+        </div>
+
+        <p id="balloonCounter">Balloons popped: 0 / 5</p>
+        <p id="balloonMessage" class="message hidden" aria-live="polite"></p>
+
+        <button id="balloonContinue" class="primary hidden" type="button">
+            Unlock the next surprise →
+        </button>
+    </section>
+
+    <!-- PAGE 4: MYSTERY GIFT -->
+    <section id="page3" class="page">
+        <p class="eyebrow">CHAPTER 03 · A MYSTERY GIFT</p>
+        <h1>One more little surprise 💝</h1>
+        <p class="subtitle">Something special is waiting inside. Tap to open!</p>
+
+        <button id="gift3" class="gift-big" type="button"
+                aria-label="Open mystery gift">🎁</button>
+
+        <div id="giftMessage" class="message hidden" aria-live="polite">
+            Surprise! 💖 Your friendship is one of life's sweetest gifts.
+            Keep smiling, keep shining, and never stop being you!
+        </div>
+
+        <button id="next4" class="primary hidden" type="button">
+            Reveal a memory →
+        </button>
+    </section>
+
+    <!-- PAGE 5: SCRATCH PHOTO -->
+    <section id="page4" class="page">
+        <p class="eyebrow">CHAPTER 04 · A MEMORY JUST FOR YOU</p>
+        <h1>Remember this? 📸</h1>
+        <p class="subtitle">Scratch the card to reveal your photo.</p>
+
+        <div id="scratchCard" class="scratch-card">
+            <img id="myPhoto" src="photo.jpeg"
+                 alt="A special birthday memory">
+            <canvas id="scratchCanvas"></canvas>
+            <span class="scratch-hint">SCRATCH HERE ✨</span>
+        </div>
+
+        <button id="next5" class="primary hidden" type="button">
+            Open your letter →
+        </button>
+    </section>
+
+    <!-- PAGE 6: FRIENDSHIP LETTER -->
+    <section id="page5" class="page">
+        <p class="eyebrow">CHAPTER 05 · A LITTLE NOTE FROM YOUR BESTIE</p>
+        <h1 class="final-title">For you, Kashish 💌</h1>
+        <p class="subtitle">Some things deserve to be said from the heart.</p>
+
+        <button id="openLetter" class="envelope" type="button"
+                aria-label="Open friendship letter">💌</button>
+        <p id="letterHint">Tap the envelope to open your letter.</p>
+
+        <article id="letter" class="letter hidden">
+            <h2>Dear Kashish, 💗</h2>
+            <div id="letterText" class="letter-text"></div>
+            <p class="letter-signoff">Keep shining, birthday girl! ✨</p>
+            <p class="signature">Your bestie, always 🫶</p>
+        </article>
+
+        <button id="nextFinal" class="primary hidden" type="button">
+            One last surprise ✨
+        </button>
+    </section>
+
+    <!-- SECRET FINAL SCREEN -->
+    <section id="pageFinal" class="page">
+        <p class="eyebrow">THE LAST LITTLE SURPRISE</p>
+        <h1 class="final-heading">Keep being you, Kashish. 💖</h1>
+        <p class="subtitle">
+            The world is brighter with you in it. Here's to more laughs,
+            random talks, unforgettable memories and a beautiful year ahead.
+        </p>
+
+        <div class="final-heart" aria-hidden="true">💖</div>
+        <p class="final-wish">Happy Birthday, bestie! 🎂</p>
+
+        <button id="restart" class="primary" type="button">
+            Replay our little journey ↻
+        </button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
